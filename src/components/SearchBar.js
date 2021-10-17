@@ -3,12 +3,19 @@ import { StyleSheet, Text, View } from 'react-native';
 
 const SearchBar = () => {
 	return (
-		<View>
+		<View style={styles.background}>
 			<Text>Search Bar</Text>
 		</View>
 	);
 };
 
-export default SearchBar;
+const styles = StyleSheet.create({
+	background: {
+		backgroundColor: '#CCC',
+		height: 45,
+		borderRadius: 5,
+		marginHorizontal: 15,
+	},
+});
 
-const styles = StyleSheet.create({});
+export default SearchBar;
