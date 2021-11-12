@@ -1,9 +1,9 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import SearchBar from '../components/SearchBar';
-import yelp from '../api/yelp';
 import useResults from '../hooks/useResults';
+import ResultsList from '../components/ResultsList';
 
 const SearchScreen = () => {
 	const [term, setTerm] = useState('');
@@ -18,6 +18,9 @@ const SearchScreen = () => {
 			/>
 			{errorMessage ? <Text>{errorMessage}</Text> : null}
 			<Text>{results.length} résultats trouvés</Text>
+			<ResultsList title='Cost Effective' />
+			<ResultsList title='Bit Pricier' />
+			<ResultsList title='Big Spender' />
 		</View>
 	);
 };
